@@ -15,7 +15,7 @@ export async function GET(request) {
         const data = await res.json()
         pokemon.id = data.id
         pokemon.type = data.types[0].type.name
-        pokemon.image= data.sprites.other['official-artwork'].front_default
+        pokemon.image = data.sprites.other['official-artwork'].front_default
     })
 
     await Promise.all(allPromises)
